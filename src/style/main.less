@@ -1,0 +1,177 @@
+@import "../assets/iconfont/iconfont.css";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+@font-face {
+  font-family: 'ming';
+  src: url("../assets/GenWanMinJP-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'siyuan';
+  src: url("../assets/bb4171.ttf") format("truetype");
+}
+.left {
+  float: left;
+}
+
+.el-carousel--vertical {
+  height: 100%;
+
+  .el-carousel__container {
+    height: 100%;
+  }
+}
+
+.action {
+  position: absolute;
+  left: 2px;
+  bottom: 14%;
+  z-index: 999;
+  color: white;
+  cursor: pointer;
+  width: 25px;
+  text-align: center;
+  -webkit-animation: actionOp 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes actionOp {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fire {
+  position: absolute;
+  z-index: 200;
+
+}
+
+.fire {
+  -webkit-animation: twinkling 1s infinite ease-in-out;
+}
+
+@-webkit-keyframes twinkling {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes twinkling {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+.text-container {
+  background: url("../assets/home/text-bg.png");
+  background-size: 100% 100%;
+  width: 85%;
+  margin: 15% auto 0;
+  height: 550px;
+  position: relative;
+  animation: textMove 2s;
+  -webkit-animation: textMove 2s;
+}
+
+.text-title {
+  font-family: ming, sans-serif;
+  color: #FFCFAA;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -7px;
+  letter-spacing: 1px;
+}
+
+@keyframes textMove {
+  0% {
+    transform: translate(0, 1500px);
+  }
+  90% {
+    transform: translate(0, -30px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+.text-content {
+  font-family: ming, sans-serif;
+  color: #972F2F;
+  position: absolute;
+  width: 82%;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  div {
+    line-height: 32px;
+    height: 32px;
+    margin-top: 2px;
+  }
+}
+
+.text-bot {
+  width: 95%;
+  position: absolute;
+  z-index: 300;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: calc(10% + 398px);
+  height: 245px;
+  animation: textMove 2.5s;
+  -webkit-animation: textMove 2.5s;
+}
+@media screen and (max-height: 680px) {
+  .text-bot {
+    top: calc(10% + 363px);
+  }
+}
+@keyframes textBotMove {
+  0% {
+    transform: translate(0, 1000px);
+  }
+  80% {
+    transform: translate(0, -55px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+.text-left {
+  text-align: left;
+}
