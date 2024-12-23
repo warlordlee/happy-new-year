@@ -6,7 +6,9 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production'
+      ? 'https://warlordlee.github.io/happy-new-year/'
+      : '/',
   outputDir: 'docs', // 输出文件目录
   plugins: [
     vue(),
