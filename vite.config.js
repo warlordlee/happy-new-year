@@ -6,6 +6,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  publicPath: './',
+  outputDir: 'docs', // 输出文件目录
   plugins: [
     vue(),
     vueDevTools(),
